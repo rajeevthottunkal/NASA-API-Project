@@ -14,10 +14,10 @@ function App() {
 
   useEffect(() => {
     async function fetchAPIData() {
-      const NASA_KEY = import.meta.env.VITE_NASA_API_KEY;
+      const NASA_KEY = import.meta.env.API_KEY;
       const url =
         "https://api.nasa.gov/planetary/apod" +
-        "?api_key=9lw9Hp25c0B7NQeKM8myWWDraknAmpIcQBNO7qHn";
+        `?api_key={NASA_KEY}`;
 
       const today = new Date().toDateString();
       const localkey = `NASA-${today}`;
